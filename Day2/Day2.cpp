@@ -11,7 +11,7 @@ int main()
 	
 	
 	// Part 1
-	/*for (auto var : input)
+	for (auto var : input)
 	{
 		int numOfChar = 0;
 		for each (auto letter in var.password)
@@ -23,9 +23,11 @@ int main()
 		if (numOfChar >= var.minNumOfAppearance && numOfChar <= var.maxNumOfAppeareance)
 			correctPW++;
 
-	}*/
+	}
+	std::cout << correctPW << " correct Passwords Part1\n";
 
 
+	correctPW = 0;
 	//Part 2
 	for (auto pwContainer : input)
 	{
@@ -34,5 +36,5 @@ int main()
 	}
 
 
-	std::cout << correctPW << " correct Passwords";
+	std::cout << correctPW << " correct Passwords Part2\n";
 }
