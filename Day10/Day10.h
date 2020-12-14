@@ -16,3 +16,5 @@ std::vector<int> getAdapters(std::string pathToFile);
 std::map<int, int> getJoltDifferences(std::vector<int> adapters);
 
 size_t adapterCombinations(std::vector<int> adapters, size_t posInArray=0);
+
+std::map<int, size_t> gCombinations;

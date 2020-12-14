@@ -71,7 +71,15 @@ size_t adapterCombinations(std::vector<int> adapters, size_t posInArray)
 	{
 		if (adapters[i] <= adapters[posInArray] + 3 )
 		{
-			counter += adapterCombinations(adapters, i);
+			if (gCombinations.find(i) == gCombinations.end())
+			{
+				counter += adapterCombinations(adapters, i);
+			}
+			else
+			{
+				counter += gCombinations[i];
+			}
+			
 		}
 		else
 		{
@@ -85,7 +93,7 @@ size_t adapterCombinations(std::vector<int> adapters, size_t posInArray)
 	}
 
 	
-	
+	gCombinations[posInArray] = counter;
 	return counter;
 }
 
